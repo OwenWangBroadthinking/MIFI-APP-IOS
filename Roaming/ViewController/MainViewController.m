@@ -134,8 +134,14 @@
     
 }
 -(void)roamRAC:(id)roamRAC flowReply:(RoamFlowReply *)flowReply{
-    unsigned long totalFlow= [DDString strtoul:flowReply.totalFlow];
-    unsigned long usedFlow= [DDString strtoul:flowReply.usedFlow];
+    unsigned long totalFlow=0,usedFlow=0;
+    NSData * total_c=[DDString dataFromHexString:flowReply.totalFlow] ;
+    NSData * total_cr=[DDString reverse:total_c];
+    [total_cr getBytes:&totalFlow length:sizeof(totalFlow)];
+    NSData * usedflow_c=[DDString dataFromHexString:flowReply.usedFlow];
+    NSData * usedflow_cr=[DDString reverse:usedflow_c];
+    [usedflow_cr getBytes:&usedFlow length:sizeof(usedFlow)];
+    
     float total_f=totalFlow/1024.00/1024.00;
     NSString * total_text=nil;
     if (total_f>1024.00) {
