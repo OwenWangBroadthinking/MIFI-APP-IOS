@@ -24,9 +24,10 @@
     DDUdpClient * udpClient=[DDUdpClient createUdpClient];
     [udpClient sendData:udpPackage.data IP:MifiIP port:MIFI_PORT recvDataCallBack:^(NSData *recvData) {
         if (recvData==nil) {
-            [RoamRAC sharedRoamRAC].udpError=@"UDP通讯异常";
+            NSString * udpError=@"getBindState UDP通讯异常";
+            [RoamRAC sharedRoamRAC].udpError=udpError;
             if ([callbackTarget respondsToSelector:@selector(roamRAC:udpError:)]) {
-                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:@"UDP通讯异常"];
+                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:udpError];
             }
         }else{
             RoamUdpPackage * recvUdpPackage=[RoamUdpPackage createPackageWithData:recvData];
@@ -50,9 +51,10 @@
     DDUdpClient * udpClient=[DDUdpClient createUdpClient];
     [udpClient sendData:udpPackage.data IP:MifiIP port:MIFI_PORT recvDataCallBack:^(NSData *recvData) {
         if (recvData==nil) {
-            [RoamRAC sharedRoamRAC].udpError=@"UDP通讯异常";
+            NSString * udpError=@"bind UDP通讯异常";
+            [RoamRAC sharedRoamRAC].udpError=udpError;
             if ([callbackTarget respondsToSelector:@selector(roamRAC:udpError:)]) {
-                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:@"UDP通讯异常"];
+                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:udpError];
             }
         }else{
             RoamUdpPackage * recvUdpPackage=[RoamUdpPackage createPackageWithData:recvData];
@@ -74,9 +76,10 @@
     DDUdpClient * udpClient=[DDUdpClient createUdpClient];
     [udpClient sendData:udpPackage.data IP:MifiIP port:MIFI_PORT recvDataCallBack:^(NSData *recvData) {
         if (recvData==nil) {
-            [RoamRAC sharedRoamRAC].udpError=@"UDP通讯异常";
+            NSString * udpError=@"disbind UDP通讯异常";
+            [RoamRAC sharedRoamRAC].udpError=udpError;
             if ([callbackTarget respondsToSelector:@selector(roamRAC:udpError:)]) {
-                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:@"UDP通讯异常"];
+                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:udpError];
             }
         }else{
             RoamUdpPackage * recvUdpPackage=[RoamUdpPackage createPackageWithData:recvData];
@@ -105,9 +108,10 @@
     DDUdpClient * udpClient=[DDUdpClient createUdpClient];
     [udpClient sendData:udpPackage.data IP:MifiIP port:MIFI_PORT recvDataCallBack:^(NSData *recvData) {
         if (recvData==nil) {
-            [RoamRAC sharedRoamRAC].udpError=@"UDP通讯异常";
+            NSString * udpError=@"activate UDP通讯异常";
+            [RoamRAC sharedRoamRAC].udpError=udpError;
             if ([callbackTarget respondsToSelector:@selector(roamRAC:udpError:)]) {
-                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:@"UDP通讯异常"];
+                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:udpError];
             }
         }else{
             RoamUdpPackage * recvUdpPackage=[RoamUdpPackage createPackageWithData:recvData];
@@ -129,9 +133,10 @@
     DDUdpClient * udpClient=[DDUdpClient createUdpClient];
     [udpClient sendData:udpPackage.data IP:MifiIP port:MIFI_PORT recvDataCallBack:^(NSData *recvData){
         if (recvData==nil) {
-            [RoamRAC sharedRoamRAC].udpError=@"UDP通讯异常";
+            NSString * udpError=@"getMifiMac UDP通讯异常";
+            [RoamRAC sharedRoamRAC].udpError=udpError;
             if ([callbackTarget respondsToSelector:@selector(roamRAC:udpError:)]) {
-                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:@"UDP通讯异常"];
+                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:udpError];
             }
         }else{
             
@@ -154,9 +159,10 @@
     DDUdpClient * udpClient=[DDUdpClient createUdpClient];
     [udpClient sendData:udpPackage.data IP:MifiIP port:MIFI_PORT recvDataCallBack:^(NSData *recvData) {
         if (recvData==nil) {
-            [RoamRAC sharedRoamRAC].udpError=@"UDP通讯异常";
+            NSString * udpError=@"getMifiVersion UDP通讯异常";
+            [RoamRAC sharedRoamRAC].udpError=udpError;
             if ([callbackTarget respondsToSelector:@selector(roamRAC:udpError:)]) {
-                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:@"UDP通讯异常"];
+                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:udpError];
             }
             
         }else{
@@ -179,9 +185,10 @@
     DDUdpClient * udpClient=[DDUdpClient createUdpClient];
     [udpClient sendData:udpPackage.data IP:MifiIP port:MIFI_PORT recvDataCallBack:^(NSData *recvData) {
         if (recvData==nil) {
-            [RoamRAC sharedRoamRAC].udpError=@"UDP通讯异常";
+            NSString * udpError=@"getUsedFlow UDP通讯异常";
+            [RoamRAC sharedRoamRAC].udpError=udpError;
             if ([callbackTarget respondsToSelector:@selector(roamRAC:udpError:)]) {
-                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:@"UDP通讯异常"];
+                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] udpError:udpError];
             }
         }else{
 

@@ -12,6 +12,7 @@
 #import "RoamUdpBusi.h"
 #import "AppDefines.h"
 #import "DDString.h"
+#import "RoamHttpBusi.h"
 #define kAnimationImages @[@"splash_0", @"splash_1", @"splash_2", @"splash_3", @"splash_4", @"splash_5"]
 @interface MainViewController ()<RoamRACDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *cellular;
@@ -150,13 +151,51 @@
     
     _lastUsedFlow=usedFlow;
     _flow.text=[NSString stringWithFormat:@"%.2fKB/S",speed_f];
-    [self performSelector:@selector(getUsedFlow) withObject:nil afterDelay:10];
+    [self performSelector:@selector(getUsedFlow) withObject:nil afterDelay:5];
+}
+-(void)roamRAC:(id)roamRAC imgInfo:(RoamImgInfo *)imgInfo{
+    NSString * bat_level=imgInfo.bat_level;
+    NSString * level_container=@"01234";
+    if ([level_container containsString:bat_level]) {
+        _power.image=[UIImage imageNamed:[NSString stringWithFormat:@"battery_%@",bat_level]];
+    }else{
+        _power.image=[UIImage imageNamed:@"battery_0"];
+    }
+    [self performSelector:@selector(getImgInfo) withObject:nil afterDelay:5];
+}
+-(void)roamRAC:(id)roamRAC wlanInfo:(RoamWlanInfo *)wlanInfo{
+    NSString * wlan_state=wlanInfo.wifi_state;
+    NSString * wlan_container=@"012345";
+    if ([wlan_container containsString:wlan_state]) {
+        _cellular.image=[UIImage imageNamed:[NSString stringWithFormat:@"cellular_%@",wlan_state]];
+    }else{
+        _cellular.image=[UIImage imageNamed:@"cellular_0"];
+    }
+    [self performSelector:@selector(getWlanInfo) withObject:nil afterDelay:5];
+}
+-(void)roamRAC:(id)roamRAC httpError:(NSString *)httpError{
+    if ([httpError hasPrefix:@"getImgInfo"]) {//获取电量失败
+        //将电量置为0电量
+        _power.image=[UIImage imageNamed:@"battery_0"];
+        [self performSelector:@selector(getImgInfo) withObject:nil afterDelay:5];
+    }else if([httpError hasPrefix:@"getWlanInfo"]){//获取Wifi信号失败
+        _cellular.image=[UIImage imageNamed:@"cellular_0"];
+        [self performSelector:@selector(getWlanInfo) withObject:nil afterDelay:5];
+    }
 }
 -(void)getUsedFlow{
     [RoamUdpBusi getUsedFlow:self];
 }
+-(void)getImgInfo{
+    [RoamHttpBusi getImgInfo:self];
+}
+-(void)getWlanInfo{
+    [RoamHttpBusi getWlanInfo:self];
+}
 -(void)startRunLoopReqSpeedAndPower{
     [self getUsedFlow];
+    [self getImgInfo];
+    [self getWlanInfo];
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     UIViewController * send= segue.destinationViewController;

@@ -80,7 +80,11 @@
 +(void)getWlanInfo:(id)callbackTarget{
     [[DDHttpClient createHttpClient] getDataFromURL:HTTP_GetWlanInfo parameters:nil dataCallBack:^(id data) {
         if (data==nil) {
-            [Tool showAlertWithMessage:@"读取Wlan信息失败"];
+            NSString * httpError=@"getWlanInfo Http通讯异常";
+//            [Tool showAlertWithMessage:@"读取Wlan信息失败"];
+            if ([callbackTarget respondsToSelector:@selector(roamRAC:httpError:)]) {
+                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] httpError:httpError];
+            }
         }else{
             NSDictionary * dict=data;
             RoamWlanInfo* wlanInfo=  [RoamWlanInfo createWlanInfoWithDict:dict];
@@ -112,7 +116,11 @@
 +(void)getImgInfo:(id)callbackTarget{
     [[DDHttpClient createHttpClient] getDataFromURL:HTTP_GetImgInfo parameters:nil dataCallBack:^(id data) {
         if (data==nil) {
-            [Tool showAlertWithMessage:@"读取Img信息失败"];
+//            [Tool showAlertWithMessage:@"读取Img信息失败"];
+            NSString * httpError=@"getImgInfo Http通讯异常";
+            if ([callbackTarget respondsToSelector:@selector(roamRAC:httpError:)]) {
+                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] httpError:httpError];
+            }
         }else{
             NSDictionary * dict=data;
             RoamImgInfo * imgInfo=[RoamImgInfo createImgInfoWithDict:dict];

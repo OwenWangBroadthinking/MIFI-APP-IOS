@@ -71,6 +71,7 @@
 -(void)roamRAC:(id)roamRAC MifiVersion:(NSString *)MifiVersion;
 -(void)roamRAC:(id)roamRAC flowReply:(RoamFlowReply *)flowReply;
 -(void)roamRAC:(id)roamRAC udpError:(NSString *)udpError;
+-(void)roamRAC:(id)roamRAC httpError:(NSString *)httpError;
 @end
 @interface RoamRAC : NSObject
 +(instancetype)sharedRoamRAC;
@@ -107,7 +108,8 @@
 @property (nonatomic, strong) RoamNetworkInfo * networkInfo;
 @property (nonatomic, strong) RoamMacFilterInfo * macFilterInfo;
 @property (nonatomic, strong) NSNumber * setMacFilterInfoState;
-@property (nonatomic, strong) NSString * udpError;
+@property (nonatomic, copy) NSString * udpError;
+@property (nonatomic, copy) NSString * httpError;
 @property (nonatomic, strong) MBProgressHUD * hud;
 @property (nonatomic, strong) MainViewController * mainViewController;
 @end
