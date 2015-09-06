@@ -57,7 +57,7 @@
     
 }
 - (IBAction)registerNow:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:^{
+    [self dismissViewControllerAnimated:NO completion:^{
         [[RoamRAC sharedRoamRAC].mainViewController performSegueWithIdentifier:@"registerSegue" sender:nil];
     }];
 }
