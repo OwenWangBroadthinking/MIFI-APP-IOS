@@ -1,0 +1,887 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		128400B0616BE4F8D75D9B2B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F52E8062FB95AFCB16DC4EEC /* libPods.a */; };
+		420867601B9057CE002173C0 /* RoamErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4208675F1B9057CE002173C0 /* RoamErrorCode.m */; };
+		4214F0AA1B96883000698F11 /* RoamRegisterReply.m in Sources */ = {isa = PBXBuildFile; fileRef = 4214F0A91B96883000698F11 /* RoamRegisterReply.m */; };
+		4214F0AD1B96971300698F11 /* RegisterSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4214F0AC1B96971300698F11 /* RegisterSuccessViewController.m */; };
+		421B75BF1B91AF390067CC8D /* RoamLoginParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B75BE1B91AF390067CC8D /* RoamLoginParameter.m */; };
+		421B75C21B91D2E20067CC8D /* RoamWlanInfoParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B75C11B91D2E20067CC8D /* RoamWlanInfoParameter.m */; };
+		421B75C51B91E6660067CC8D /* RoamRouterInfoParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B75C41B91E6660067CC8D /* RoamRouterInfoParameter.m */; };
+		422628421B8EA47F00F5FB05 /* RoamBindReply.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628411B8EA47F00F5FB05 /* RoamBindReply.m */; };
+		422628451B8EAA3E00F5FB05 /* RoamActivateReply.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628441B8EAA3E00F5FB05 /* RoamActivateReply.m */; };
+		422628481B8EAD9C00F5FB05 /* RoamFlowReply.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628471B8EAD9C00F5FB05 /* RoamFlowReply.m */; };
+		4226284B1B8EB4BA00F5FB05 /* RoamWlanInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4226284A1B8EB4BA00F5FB05 /* RoamWlanInfo.m */; };
+		4226284E1B8EB90100F5FB05 /* RoamWanInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4226284D1B8EB90100F5FB05 /* RoamWanInfo.m */; };
+		422628511B8EC9F300F5FB05 /* RoamImgInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628501B8EC9F300F5FB05 /* RoamImgInfo.m */; };
+		422628541B8ED04500F5FB05 /* RoamSimInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628531B8ED04500F5FB05 /* RoamSimInfo.m */; };
+		422628571B8EDAED00F5FB05 /* RoamLoginState.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628561B8EDAED00F5FB05 /* RoamLoginState.m */; };
+		4226285A1B8EDDCC00F5FB05 /* RoamLocale.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628591B8EDDCC00F5FB05 /* RoamLocale.m */; };
+		4226285D1B8EDF9C00F5FB05 /* RoamLoginReply.m in Sources */ = {isa = PBXBuildFile; fileRef = 4226285C1B8EDF9C00F5FB05 /* RoamLoginReply.m */; };
+		422628601B8EE1D800F5FB05 /* RoamDeviceSlotMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4226285F1B8EE1D800F5FB05 /* RoamDeviceSlotMode.m */; };
+		422628631B8EE33E00F5FB05 /* RoamProfileList.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628621B8EE33E00F5FB05 /* RoamProfileList.m */; };
+		422628661B8EE3F000F5FB05 /* RoamProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628651B8EE3F000F5FB05 /* RoamProfile.m */; };
+		422628691B8EE66F00F5FB05 /* RoamCurrentProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628681B8EE66F00F5FB05 /* RoamCurrentProfile.m */; };
+		4226286C1B8EF78300F5FB05 /* RoamRouterInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4226286B1B8EF78300F5FB05 /* RoamRouterInfo.m */; };
+		4226286F1B8F05D000F5FB05 /* RoamSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4226286E1B8F05D000F5FB05 /* RoamSystemInfo.m */; };
+		422628721B8F081B00F5FB05 /* RoamSMSStoreState.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628711B8F081B00F5FB05 /* RoamSMSStoreState.m */; };
+		422628751B8F09B200F5FB05 /* RoamSMSPageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628741B8F09B200F5FB05 /* RoamSMSPageInfo.m */; };
+		422628781B8F0B6600F5FB05 /* RoamSMSList.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628771B8F0B6600F5FB05 /* RoamSMSList.m */; };
+		4226287B1B8F0C9C00F5FB05 /* RoamSMS.m in Sources */ = {isa = PBXBuildFile; fileRef = 4226287A1B8F0C9C00F5FB05 /* RoamSMS.m */; };
+		4226287E1B8F0E1D00F5FB05 /* RoamNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4226287D1B8F0E1D00F5FB05 /* RoamNetworkInfo.m */; };
+		422628811B8F0EE200F5FB05 /* RoamMacFilterInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 422628801B8F0EE200F5FB05 /* RoamMacFilterInfo.m */; };
+		42274A231B942955001D4453 /* InterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42274A221B942955001D4453 /* InterfaceViewController.m */; };
+		42274A261B942971001D4453 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42274A251B942971001D4453 /* MainViewController.m */; };
+		423FB48F1B8D8667006A8AF7 /* RoamBindState.m in Sources */ = {isa = PBXBuildFile; fileRef = 423FB48E1B8D8667006A8AF7 /* RoamBindState.m */; };
+		42520D441B954677008EE714 /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42520D431B954677008EE714 /* UserCenterViewController.m */; };
+		42520D471B956CC7008EE714 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42520D461B956CC7008EE714 /* SettingViewController.m */; };
+		42567CF01B8AC7CE00163D07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42567CEF1B8AC7CE00163D07 /* main.m */; };
+		42567CF31B8AC7CE00163D07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42567CF21B8AC7CE00163D07 /* AppDelegate.m */; };
+		42567CF91B8AC7CE00163D07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42567CF71B8AC7CE00163D07 /* Main.storyboard */; };
+		42567CFB1B8AC7CE00163D07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42567CFA1B8AC7CE00163D07 /* Images.xcassets */; };
+		42567CFE1B8AC7CE00163D07 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42567CFC1B8AC7CE00163D07 /* LaunchScreen.xib */; };
+		42567D0A1B8AC7CE00163D07 /* RoamingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42567D091B8AC7CE00163D07 /* RoamingTests.m */; };
+		42567D161B8AE3C400163D07 /* DDUdpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 42567D151B8AE3C400163D07 /* DDUdpClient.m */; };
+		42567D191B8AE61200163D07 /* DDHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 42567D181B8AE61200163D07 /* DDHttpClient.m */; };
+		42567D201B8AFF2A00163D07 /* RoamHttpBusi.m in Sources */ = {isa = PBXBuildFile; fileRef = 42567D1F1B8AFF2A00163D07 /* RoamHttpBusi.m */; };
+		42567D231B8AFF5100163D07 /* RoamUdpBusi.m in Sources */ = {isa = PBXBuildFile; fileRef = 42567D221B8AFF5100163D07 /* RoamUdpBusi.m */; };
+		42567D261B8AFFDE00163D07 /* RoamRAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 42567D251B8AFFDE00163D07 /* RoamRAC.m */; };
+		42567D2B1B8B07AC00163D07 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 42567D2A1B8B07AC00163D07 /* Tool.m */; };
+		42567D331B8B153000163D07 /* getgateway.c in Sources */ = {isa = PBXBuildFile; fileRef = 42567D301B8B153000163D07 /* getgateway.c */; };
+		425E659A1B95A2FA002736EA /* VersionInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425E65991B95A2FA002736EA /* VersionInfoViewController.m */; };
+		425E659D1B95A753002736EA /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425E659C1B95A753002736EA /* AboutMeViewController.m */; };
+		425F0C0F1B92FF9300223411 /* DDBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 425F0C0E1B92FF9300223411 /* DDBase64.m */; };
+		425F0C121B93064400223411 /* DDOpenSSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 425F0C111B93064400223411 /* DDOpenSSL.m */; };
+		425F0C151B93072600223411 /* DDAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 425F0C141B93072600223411 /* DDAES.m */; };
+		4289A9791B96CDAD009823F3 /* MatchPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4289A9781B96CDAD009823F3 /* MatchPhoneViewController.m */; };
+		42C5DA191B8C3A63009F2DF9 /* RoamUdpPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C5DA181B8C3A63009F2DF9 /* RoamUdpPackage.m */; };
+		42C5DA1C1B8C4703009F2DF9 /* DDString.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C5DA1B1B8C4703009F2DF9 /* DDString.m */; };
+		42E29BF11B95F1DC00A09B64 /* WaitConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E29BF01B95F1DC00A09B64 /* WaitConnectViewController.m */; };
+		42E29BF41B960A3C00A09B64 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E29BF31B960A3C00A09B64 /* RegisterViewController.m */; };
+		42E29BF71B96115200A09B64 /* DDRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E29BF61B96115200A09B64 /* DDRegex.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42567D041B8AC7CE00163D07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42567CE21B8AC7CE00163D07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42567CE91B8AC7CE00163D07;
+			remoteInfo = Roaming;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1AC252E15A21288B69818C1B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4208675E1B9057CE002173C0 /* RoamErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamErrorCode.h; sourceTree = "<group>"; };
+		4208675F1B9057CE002173C0 /* RoamErrorCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamErrorCode.m; sourceTree = "<group>"; };
+		4214F0A81B96883000698F11 /* RoamRegisterReply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamRegisterReply.h; sourceTree = "<group>"; };
+		4214F0A91B96883000698F11 /* RoamRegisterReply.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamRegisterReply.m; sourceTree = "<group>"; };
+		4214F0AB1B96971300698F11 /* RegisterSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterSuccessViewController.h; sourceTree = "<group>"; };
+		4214F0AC1B96971300698F11 /* RegisterSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterSuccessViewController.m; sourceTree = "<group>"; };
+		4214F0B11B969FA200698F11 /* UserDefaultKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDefaultKey.h; sourceTree = "<group>"; };
+		421B75BD1B91AF390067CC8D /* RoamLoginParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamLoginParameter.h; sourceTree = "<group>"; };
+		421B75BE1B91AF390067CC8D /* RoamLoginParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamLoginParameter.m; sourceTree = "<group>"; };
+		421B75C01B91D2E20067CC8D /* RoamWlanInfoParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamWlanInfoParameter.h; sourceTree = "<group>"; };
+		421B75C11B91D2E20067CC8D /* RoamWlanInfoParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamWlanInfoParameter.m; sourceTree = "<group>"; };
+		421B75C31B91E6660067CC8D /* RoamRouterInfoParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamRouterInfoParameter.h; sourceTree = "<group>"; };
+		421B75C41B91E6660067CC8D /* RoamRouterInfoParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamRouterInfoParameter.m; sourceTree = "<group>"; };
+		422628401B8EA47F00F5FB05 /* RoamBindReply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamBindReply.h; sourceTree = "<group>"; };
+		422628411B8EA47F00F5FB05 /* RoamBindReply.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamBindReply.m; sourceTree = "<group>"; };
+		422628431B8EAA3E00F5FB05 /* RoamActivateReply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamActivateReply.h; sourceTree = "<group>"; };
+		422628441B8EAA3E00F5FB05 /* RoamActivateReply.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamActivateReply.m; sourceTree = "<group>"; };
+		422628461B8EAD9C00F5FB05 /* RoamFlowReply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamFlowReply.h; sourceTree = "<group>"; };
+		422628471B8EAD9C00F5FB05 /* RoamFlowReply.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamFlowReply.m; sourceTree = "<group>"; };
+		422628491B8EB4BA00F5FB05 /* RoamWlanInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamWlanInfo.h; sourceTree = "<group>"; };
+		4226284A1B8EB4BA00F5FB05 /* RoamWlanInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamWlanInfo.m; sourceTree = "<group>"; };
+		4226284C1B8EB90100F5FB05 /* RoamWanInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamWanInfo.h; sourceTree = "<group>"; };
+		4226284D1B8EB90100F5FB05 /* RoamWanInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamWanInfo.m; sourceTree = "<group>"; };
+		4226284F1B8EC9F300F5FB05 /* RoamImgInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamImgInfo.h; sourceTree = "<group>"; };
+		422628501B8EC9F300F5FB05 /* RoamImgInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamImgInfo.m; sourceTree = "<group>"; };
+		422628521B8ED04500F5FB05 /* RoamSimInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamSimInfo.h; sourceTree = "<group>"; };
+		422628531B8ED04500F5FB05 /* RoamSimInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamSimInfo.m; sourceTree = "<group>"; };
+		422628551B8EDAED00F5FB05 /* RoamLoginState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamLoginState.h; sourceTree = "<group>"; };
+		422628561B8EDAED00F5FB05 /* RoamLoginState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamLoginState.m; sourceTree = "<group>"; };
+		422628581B8EDDCC00F5FB05 /* RoamLocale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamLocale.h; sourceTree = "<group>"; };
+		422628591B8EDDCC00F5FB05 /* RoamLocale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamLocale.m; sourceTree = "<group>"; };
+		4226285B1B8EDF9C00F5FB05 /* RoamLoginReply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamLoginReply.h; sourceTree = "<group>"; };
+		4226285C1B8EDF9C00F5FB05 /* RoamLoginReply.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamLoginReply.m; sourceTree = "<group>"; };
+		4226285E1B8EE1D800F5FB05 /* RoamDeviceSlotMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamDeviceSlotMode.h; sourceTree = "<group>"; };
+		4226285F1B8EE1D800F5FB05 /* RoamDeviceSlotMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamDeviceSlotMode.m; sourceTree = "<group>"; };
+		422628611B8EE33E00F5FB05 /* RoamProfileList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamProfileList.h; sourceTree = "<group>"; };
+		422628621B8EE33E00F5FB05 /* RoamProfileList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamProfileList.m; sourceTree = "<group>"; };
+		422628641B8EE3F000F5FB05 /* RoamProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamProfile.h; sourceTree = "<group>"; };
+		422628651B8EE3F000F5FB05 /* RoamProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamProfile.m; sourceTree = "<group>"; };
+		422628671B8EE66F00F5FB05 /* RoamCurrentProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamCurrentProfile.h; sourceTree = "<group>"; };
+		422628681B8EE66F00F5FB05 /* RoamCurrentProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamCurrentProfile.m; sourceTree = "<group>"; };
+		4226286A1B8EF78300F5FB05 /* RoamRouterInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamRouterInfo.h; sourceTree = "<group>"; };
+		4226286B1B8EF78300F5FB05 /* RoamRouterInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamRouterInfo.m; sourceTree = "<group>"; };
+		4226286D1B8F05D000F5FB05 /* RoamSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamSystemInfo.h; sourceTree = "<group>"; };
+		4226286E1B8F05D000F5FB05 /* RoamSystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamSystemInfo.m; sourceTree = "<group>"; };
+		422628701B8F081B00F5FB05 /* RoamSMSStoreState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamSMSStoreState.h; sourceTree = "<group>"; };
+		422628711B8F081B00F5FB05 /* RoamSMSStoreState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamSMSStoreState.m; sourceTree = "<group>"; };
+		422628731B8F09B200F5FB05 /* RoamSMSPageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamSMSPageInfo.h; sourceTree = "<group>"; };
+		422628741B8F09B200F5FB05 /* RoamSMSPageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamSMSPageInfo.m; sourceTree = "<group>"; };
+		422628761B8F0B6600F5FB05 /* RoamSMSList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamSMSList.h; sourceTree = "<group>"; };
+		422628771B8F0B6600F5FB05 /* RoamSMSList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamSMSList.m; sourceTree = "<group>"; };
+		422628791B8F0C9C00F5FB05 /* RoamSMS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamSMS.h; sourceTree = "<group>"; };
+		4226287A1B8F0C9C00F5FB05 /* RoamSMS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamSMS.m; sourceTree = "<group>"; };
+		4226287C1B8F0E1D00F5FB05 /* RoamNetworkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamNetworkInfo.h; sourceTree = "<group>"; };
+		4226287D1B8F0E1D00F5FB05 /* RoamNetworkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamNetworkInfo.m; sourceTree = "<group>"; };
+		4226287F1B8F0EE200F5FB05 /* RoamMacFilterInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamMacFilterInfo.h; sourceTree = "<group>"; };
+		422628801B8F0EE200F5FB05 /* RoamMacFilterInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamMacFilterInfo.m; sourceTree = "<group>"; };
+		42274A211B942955001D4453 /* InterfaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceViewController.h; sourceTree = "<group>"; };
+		42274A221B942955001D4453 /* InterfaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceViewController.m; sourceTree = "<group>"; };
+		42274A241B942971001D4453 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		42274A251B942971001D4453 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		423FB48D1B8D8667006A8AF7 /* RoamBindState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamBindState.h; sourceTree = "<group>"; };
+		423FB48E1B8D8667006A8AF7 /* RoamBindState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamBindState.m; sourceTree = "<group>"; };
+		42520D421B954677008EE714 /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
+		42520D431B954677008EE714 /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
+		42520D451B956CC7008EE714 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		42520D461B956CC7008EE714 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		42567CEA1B8AC7CE00163D07 /* Roaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42567CEE1B8AC7CE00163D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42567CEF1B8AC7CE00163D07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42567CF11B8AC7CE00163D07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		42567CF21B8AC7CE00163D07 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		42567CF81B8AC7CE00163D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		42567CFA1B8AC7CE00163D07 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		42567CFD1B8AC7CE00163D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		42567D031B8AC7CE00163D07 /* RoamingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoamingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42567D081B8AC7CE00163D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42567D091B8AC7CE00163D07 /* RoamingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoamingTests.m; sourceTree = "<group>"; };
+		42567D141B8AE3C400163D07 /* DDUdpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDUdpClient.h; sourceTree = "<group>"; };
+		42567D151B8AE3C400163D07 /* DDUdpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDUdpClient.m; sourceTree = "<group>"; };
+		42567D171B8AE61200163D07 /* DDHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHttpClient.h; sourceTree = "<group>"; };
+		42567D181B8AE61200163D07 /* DDHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHttpClient.m; sourceTree = "<group>"; };
+		42567D1B1B8AE72500163D07 /* AppDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefines.h; sourceTree = "<group>"; };
+		42567D1C1B8AE73C00163D07 /* InterfaceDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceDefines.h; sourceTree = "<group>"; };
+		42567D1E1B8AFF2A00163D07 /* RoamHttpBusi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamHttpBusi.h; sourceTree = "<group>"; };
+		42567D1F1B8AFF2A00163D07 /* RoamHttpBusi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamHttpBusi.m; sourceTree = "<group>"; };
+		42567D211B8AFF5100163D07 /* RoamUdpBusi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamUdpBusi.h; sourceTree = "<group>"; };
+		42567D221B8AFF5100163D07 /* RoamUdpBusi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamUdpBusi.m; sourceTree = "<group>"; };
+		42567D241B8AFFDE00163D07 /* RoamRAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamRAC.h; sourceTree = "<group>"; };
+		42567D251B8AFFDE00163D07 /* RoamRAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamRAC.m; sourceTree = "<group>"; };
+		42567D291B8B07AC00163D07 /* Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
+		42567D2A1B8B07AC00163D07 /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
+		42567D301B8B153000163D07 /* getgateway.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = getgateway.c; sourceTree = "<group>"; };
+		42567D311B8B153000163D07 /* getgateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getgateway.h; sourceTree = "<group>"; };
+		42567D321B8B153000163D07 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		425E65981B95A2FA002736EA /* VersionInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionInfoViewController.h; sourceTree = "<group>"; };
+		425E65991B95A2FA002736EA /* VersionInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionInfoViewController.m; sourceTree = "<group>"; };
+		425E659B1B95A753002736EA /* AboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeViewController.h; sourceTree = "<group>"; };
+		425E659C1B95A753002736EA /* AboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeViewController.m; sourceTree = "<group>"; };
+		425F0C0D1B92FF9300223411 /* DDBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBase64.h; sourceTree = "<group>"; };
+		425F0C0E1B92FF9300223411 /* DDBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBase64.m; sourceTree = "<group>"; };
+		425F0C101B93064400223411 /* DDOpenSSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDOpenSSL.h; sourceTree = "<group>"; };
+		425F0C111B93064400223411 /* DDOpenSSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDOpenSSL.m; sourceTree = "<group>"; };
+		425F0C131B93072600223411 /* DDAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAES.h; sourceTree = "<group>"; };
+		425F0C141B93072600223411 /* DDAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAES.m; sourceTree = "<group>"; };
+		4289A9771B96CDAD009823F3 /* MatchPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchPhoneViewController.h; sourceTree = "<group>"; };
+		4289A9781B96CDAD009823F3 /* MatchPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchPhoneViewController.m; sourceTree = "<group>"; };
+		42C5DA171B8C3A63009F2DF9 /* RoamUdpPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamUdpPackage.h; sourceTree = "<group>"; };
+		42C5DA181B8C3A63009F2DF9 /* RoamUdpPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamUdpPackage.m; sourceTree = "<group>"; };
+		42C5DA1A1B8C4703009F2DF9 /* DDString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDString.h; sourceTree = "<group>"; };
+		42C5DA1B1B8C4703009F2DF9 /* DDString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDString.m; sourceTree = "<group>"; };
+		42E29BEF1B95F1DC00A09B64 /* WaitConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitConnectViewController.h; sourceTree = "<group>"; };
+		42E29BF01B95F1DC00A09B64 /* WaitConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitConnectViewController.m; sourceTree = "<group>"; };
+		42E29BF21B960A3C00A09B64 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		42E29BF31B960A3C00A09B64 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		42E29BF51B96115200A09B64 /* DDRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRegex.h; sourceTree = "<group>"; };
+		42E29BF61B96115200A09B64 /* DDRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRegex.m; sourceTree = "<group>"; };
+		A7D068E21181E587DF4C9B01 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F52E8062FB95AFCB16DC4EEC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42567CE71B8AC7CE00163D07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				128400B0616BE4F8D75D9B2B /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42567D001B8AC7CE00163D07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B04E2DB880852A5A2F0C42E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F52E8062FB95AFCB16DC4EEC /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42274A201B942955001D4453 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				42274A211B942955001D4453 /* InterfaceViewController.h */,
+				42274A221B942955001D4453 /* InterfaceViewController.m */,
+				42274A241B942971001D4453 /* MainViewController.h */,
+				42274A251B942971001D4453 /* MainViewController.m */,
+				42520D421B954677008EE714 /* UserCenterViewController.h */,
+				42520D431B954677008EE714 /* UserCenterViewController.m */,
+				42520D451B956CC7008EE714 /* SettingViewController.h */,
+				42520D461B956CC7008EE714 /* SettingViewController.m */,
+				425E65981B95A2FA002736EA /* VersionInfoViewController.h */,
+				425E65991B95A2FA002736EA /* VersionInfoViewController.m */,
+				425E659B1B95A753002736EA /* AboutMeViewController.h */,
+				425E659C1B95A753002736EA /* AboutMeViewController.m */,
+				42E29BEF1B95F1DC00A09B64 /* WaitConnectViewController.h */,
+				42E29BF01B95F1DC00A09B64 /* WaitConnectViewController.m */,
+				42E29BF21B960A3C00A09B64 /* RegisterViewController.h */,
+				42E29BF31B960A3C00A09B64 /* RegisterViewController.m */,
+				4214F0AB1B96971300698F11 /* RegisterSuccessViewController.h */,
+				4214F0AC1B96971300698F11 /* RegisterSuccessViewController.m */,
+				4289A9771B96CDAD009823F3 /* MatchPhoneViewController.h */,
+				4289A9781B96CDAD009823F3 /* MatchPhoneViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		42274A271B9429DE001D4453 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42567CE11B8AC7CE00163D07 = {
+			isa = PBXGroup;
+			children = (
+				42567CEC1B8AC7CE00163D07 /* Roaming */,
+				42567D061B8AC7CE00163D07 /* RoamingTests */,
+				42567CEB1B8AC7CE00163D07 /* Products */,
+				BD0BFBDE0BF8B292D4A5A159 /* Pods */,
+				3B04E2DB880852A5A2F0C42E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		42567CEB1B8AC7CE00163D07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42567CEA1B8AC7CE00163D07 /* Roaming.app */,
+				42567D031B8AC7CE00163D07 /* RoamingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42567CEC1B8AC7CE00163D07 /* Roaming */ = {
+			isa = PBXGroup;
+			children = (
+				42274A271B9429DE001D4453 /* View */,
+				42274A201B942955001D4453 /* ViewController */,
+				42C5DA161B8C3A51009F2DF9 /* Modal */,
+				42567D271B8B079D00163D07 /* General */,
+				42567D1D1B8AFEF600163D07 /* Busi */,
+				42567D1A1B8AE6FA00163D07 /* Macro */,
+				42567D131B8AE3A300163D07 /* Network */,
+				42567CF11B8AC7CE00163D07 /* AppDelegate.h */,
+				42567CF21B8AC7CE00163D07 /* AppDelegate.m */,
+				42567CF71B8AC7CE00163D07 /* Main.storyboard */,
+				42567CFA1B8AC7CE00163D07 /* Images.xcassets */,
+				42567CFC1B8AC7CE00163D07 /* LaunchScreen.xib */,
+				42567CED1B8AC7CE00163D07 /* Supporting Files */,
+			);
+			path = Roaming;
+			sourceTree = "<group>";
+		};
+		42567CED1B8AC7CE00163D07 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42567CEE1B8AC7CE00163D07 /* Info.plist */,
+				42567CEF1B8AC7CE00163D07 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42567D061B8AC7CE00163D07 /* RoamingTests */ = {
+			isa = PBXGroup;
+			children = (
+				42567D091B8AC7CE00163D07 /* RoamingTests.m */,
+				42567D071B8AC7CE00163D07 /* Supporting Files */,
+			);
+			path = RoamingTests;
+			sourceTree = "<group>";
+		};
+		42567D071B8AC7CE00163D07 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42567D081B8AC7CE00163D07 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42567D131B8AE3A300163D07 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				42567D141B8AE3C400163D07 /* DDUdpClient.h */,
+				42567D151B8AE3C400163D07 /* DDUdpClient.m */,
+				42567D171B8AE61200163D07 /* DDHttpClient.h */,
+				42567D181B8AE61200163D07 /* DDHttpClient.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		42567D1A1B8AE6FA00163D07 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				42567D1B1B8AE72500163D07 /* AppDefines.h */,
+				42567D1C1B8AE73C00163D07 /* InterfaceDefines.h */,
+				4214F0B11B969FA200698F11 /* UserDefaultKey.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		42567D1D1B8AFEF600163D07 /* Busi */ = {
+			isa = PBXGroup;
+			children = (
+				42567D1E1B8AFF2A00163D07 /* RoamHttpBusi.h */,
+				42567D1F1B8AFF2A00163D07 /* RoamHttpBusi.m */,
+				42567D211B8AFF5100163D07 /* RoamUdpBusi.h */,
+				42567D221B8AFF5100163D07 /* RoamUdpBusi.m */,
+				42567D241B8AFFDE00163D07 /* RoamRAC.h */,
+				42567D251B8AFFDE00163D07 /* RoamRAC.m */,
+			);
+			path = Busi;
+			sourceTree = "<group>";
+		};
+		42567D271B8B079D00163D07 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				42567D2F1B8B153000163D07 /* RouteAddress */,
+				42567D281B8B079D00163D07 /* Utils */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		42567D281B8B079D00163D07 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				42E29BF51B96115200A09B64 /* DDRegex.h */,
+				42E29BF61B96115200A09B64 /* DDRegex.m */,
+				425F0C101B93064400223411 /* DDOpenSSL.h */,
+				425F0C111B93064400223411 /* DDOpenSSL.m */,
+				425F0C0D1B92FF9300223411 /* DDBase64.h */,
+				425F0C0E1B92FF9300223411 /* DDBase64.m */,
+				42C5DA1A1B8C4703009F2DF9 /* DDString.h */,
+				42C5DA1B1B8C4703009F2DF9 /* DDString.m */,
+				42567D291B8B07AC00163D07 /* Tool.h */,
+				42567D2A1B8B07AC00163D07 /* Tool.m */,
+				425F0C131B93072600223411 /* DDAES.h */,
+				425F0C141B93072600223411 /* DDAES.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		42567D2F1B8B153000163D07 /* RouteAddress */ = {
+			isa = PBXGroup;
+			children = (
+				42567D301B8B153000163D07 /* getgateway.c */,
+				42567D311B8B153000163D07 /* getgateway.h */,
+				42567D321B8B153000163D07 /* route.h */,
+			);
+			path = RouteAddress;
+			sourceTree = "<group>";
+		};
+		42C5DA161B8C3A51009F2DF9 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				42C5DA171B8C3A63009F2DF9 /* RoamUdpPackage.h */,
+				42C5DA181B8C3A63009F2DF9 /* RoamUdpPackage.m */,
+				423FB48D1B8D8667006A8AF7 /* RoamBindState.h */,
+				423FB48E1B8D8667006A8AF7 /* RoamBindState.m */,
+				422628401B8EA47F00F5FB05 /* RoamBindReply.h */,
+				422628411B8EA47F00F5FB05 /* RoamBindReply.m */,
+				422628431B8EAA3E00F5FB05 /* RoamActivateReply.h */,
+				422628441B8EAA3E00F5FB05 /* RoamActivateReply.m */,
+				422628461B8EAD9C00F5FB05 /* RoamFlowReply.h */,
+				422628471B8EAD9C00F5FB05 /* RoamFlowReply.m */,
+				422628491B8EB4BA00F5FB05 /* RoamWlanInfo.h */,
+				4226284A1B8EB4BA00F5FB05 /* RoamWlanInfo.m */,
+				4226284C1B8EB90100F5FB05 /* RoamWanInfo.h */,
+				4226284D1B8EB90100F5FB05 /* RoamWanInfo.m */,
+				4226284F1B8EC9F300F5FB05 /* RoamImgInfo.h */,
+				422628501B8EC9F300F5FB05 /* RoamImgInfo.m */,
+				422628521B8ED04500F5FB05 /* RoamSimInfo.h */,
+				422628531B8ED04500F5FB05 /* RoamSimInfo.m */,
+				422628551B8EDAED00F5FB05 /* RoamLoginState.h */,
+				422628561B8EDAED00F5FB05 /* RoamLoginState.m */,
+				422628581B8EDDCC00F5FB05 /* RoamLocale.h */,
+				422628591B8EDDCC00F5FB05 /* RoamLocale.m */,
+				4226285B1B8EDF9C00F5FB05 /* RoamLoginReply.h */,
+				4226285C1B8EDF9C00F5FB05 /* RoamLoginReply.m */,
+				4226285E1B8EE1D800F5FB05 /* RoamDeviceSlotMode.h */,
+				4226285F1B8EE1D800F5FB05 /* RoamDeviceSlotMode.m */,
+				422628611B8EE33E00F5FB05 /* RoamProfileList.h */,
+				422628621B8EE33E00F5FB05 /* RoamProfileList.m */,
+				422628641B8EE3F000F5FB05 /* RoamProfile.h */,
+				422628651B8EE3F000F5FB05 /* RoamProfile.m */,
+				422628671B8EE66F00F5FB05 /* RoamCurrentProfile.h */,
+				422628681B8EE66F00F5FB05 /* RoamCurrentProfile.m */,
+				4226286A1B8EF78300F5FB05 /* RoamRouterInfo.h */,
+				4226286B1B8EF78300F5FB05 /* RoamRouterInfo.m */,
+				4226286D1B8F05D000F5FB05 /* RoamSystemInfo.h */,
+				4226286E1B8F05D000F5FB05 /* RoamSystemInfo.m */,
+				422628701B8F081B00F5FB05 /* RoamSMSStoreState.h */,
+				422628711B8F081B00F5FB05 /* RoamSMSStoreState.m */,
+				422628731B8F09B200F5FB05 /* RoamSMSPageInfo.h */,
+				422628741B8F09B200F5FB05 /* RoamSMSPageInfo.m */,
+				422628761B8F0B6600F5FB05 /* RoamSMSList.h */,
+				422628771B8F0B6600F5FB05 /* RoamSMSList.m */,
+				422628791B8F0C9C00F5FB05 /* RoamSMS.h */,
+				4226287A1B8F0C9C00F5FB05 /* RoamSMS.m */,
+				4226287C1B8F0E1D00F5FB05 /* RoamNetworkInfo.h */,
+				4226287D1B8F0E1D00F5FB05 /* RoamNetworkInfo.m */,
+				4226287F1B8F0EE200F5FB05 /* RoamMacFilterInfo.h */,
+				422628801B8F0EE200F5FB05 /* RoamMacFilterInfo.m */,
+				4208675E1B9057CE002173C0 /* RoamErrorCode.h */,
+				4208675F1B9057CE002173C0 /* RoamErrorCode.m */,
+				421B75BD1B91AF390067CC8D /* RoamLoginParameter.h */,
+				421B75BE1B91AF390067CC8D /* RoamLoginParameter.m */,
+				421B75C01B91D2E20067CC8D /* RoamWlanInfoParameter.h */,
+				421B75C11B91D2E20067CC8D /* RoamWlanInfoParameter.m */,
+				421B75C31B91E6660067CC8D /* RoamRouterInfoParameter.h */,
+				421B75C41B91E6660067CC8D /* RoamRouterInfoParameter.m */,
+				4214F0A81B96883000698F11 /* RoamRegisterReply.h */,
+				4214F0A91B96883000698F11 /* RoamRegisterReply.m */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		BD0BFBDE0BF8B292D4A5A159 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1AC252E15A21288B69818C1B /* Pods.debug.xcconfig */,
+				A7D068E21181E587DF4C9B01 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42567CE91B8AC7CE00163D07 /* Roaming */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42567D0D1B8AC7CE00163D07 /* Build configuration list for PBXNativeTarget "Roaming" */;
+			buildPhases = (
+				33AD390AAD3711E139F3C86B /* Check Pods Manifest.lock */,
+				42567CE61B8AC7CE00163D07 /* Sources */,
+				42567CE71B8AC7CE00163D07 /* Frameworks */,
+				42567CE81B8AC7CE00163D07 /* Resources */,
+				75E8CF05C4D948A9835954D7 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Roaming;
+			productName = Roaming;
+			productReference = 42567CEA1B8AC7CE00163D07 /* Roaming.app */;
+			productType = "com.apple.product-type.application";
+		};
+		42567D021B8AC7CE00163D07 /* RoamingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42567D101B8AC7CE00163D07 /* Build configuration list for PBXNativeTarget "RoamingTests" */;
+			buildPhases = (
+				42567CFF1B8AC7CE00163D07 /* Sources */,
+				42567D001B8AC7CE00163D07 /* Frameworks */,
+				42567D011B8AC7CE00163D07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42567D051B8AC7CE00163D07 /* PBXTargetDependency */,
+			);
+			name = RoamingTests;
+			productName = RoamingTests;
+			productReference = 42567D031B8AC7CE00163D07 /* RoamingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42567CE21B8AC7CE00163D07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = icfcc;
+				TargetAttributes = {
+					42567CE91B8AC7CE00163D07 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = KUF343W9CX;
+					};
+					42567D021B8AC7CE00163D07 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 42567CE91B8AC7CE00163D07;
+					};
+				};
+			};
+			buildConfigurationList = 42567CE51B8AC7CE00163D07 /* Build configuration list for PBXProject "Roaming" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42567CE11B8AC7CE00163D07;
+			productRefGroup = 42567CEB1B8AC7CE00163D07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42567CE91B8AC7CE00163D07 /* Roaming */,
+				42567D021B8AC7CE00163D07 /* RoamingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42567CE81B8AC7CE00163D07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42567CF91B8AC7CE00163D07 /* Main.storyboard in Resources */,
+				42567CFE1B8AC7CE00163D07 /* LaunchScreen.xib in Resources */,
+				42567CFB1B8AC7CE00163D07 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42567D011B8AC7CE00163D07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33AD390AAD3711E139F3C86B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		75E8CF05C4D948A9835954D7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42567CE61B8AC7CE00163D07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				421B75BF1B91AF390067CC8D /* RoamLoginParameter.m in Sources */,
+				422628661B8EE3F000F5FB05 /* RoamProfile.m in Sources */,
+				42567D191B8AE61200163D07 /* DDHttpClient.m in Sources */,
+				42567D261B8AFFDE00163D07 /* RoamRAC.m in Sources */,
+				4226286C1B8EF78300F5FB05 /* RoamRouterInfo.m in Sources */,
+				4226285A1B8EDDCC00F5FB05 /* RoamLocale.m in Sources */,
+				422628421B8EA47F00F5FB05 /* RoamBindReply.m in Sources */,
+				422628781B8F0B6600F5FB05 /* RoamSMSList.m in Sources */,
+				422628631B8EE33E00F5FB05 /* RoamProfileList.m in Sources */,
+				4214F0AA1B96883000698F11 /* RoamRegisterReply.m in Sources */,
+				425F0C151B93072600223411 /* DDAES.m in Sources */,
+				4226284B1B8EB4BA00F5FB05 /* RoamWlanInfo.m in Sources */,
+				421B75C21B91D2E20067CC8D /* RoamWlanInfoParameter.m in Sources */,
+				422628451B8EAA3E00F5FB05 /* RoamActivateReply.m in Sources */,
+				421B75C51B91E6660067CC8D /* RoamRouterInfoParameter.m in Sources */,
+				42520D471B956CC7008EE714 /* SettingViewController.m in Sources */,
+				42567D161B8AE3C400163D07 /* DDUdpClient.m in Sources */,
+				4226286F1B8F05D000F5FB05 /* RoamSystemInfo.m in Sources */,
+				42567CF31B8AC7CE00163D07 /* AppDelegate.m in Sources */,
+				42C5DA191B8C3A63009F2DF9 /* RoamUdpPackage.m in Sources */,
+				425F0C121B93064400223411 /* DDOpenSSL.m in Sources */,
+				4226287E1B8F0E1D00F5FB05 /* RoamNetworkInfo.m in Sources */,
+				422628811B8F0EE200F5FB05 /* RoamMacFilterInfo.m in Sources */,
+				42567D231B8AFF5100163D07 /* RoamUdpBusi.m in Sources */,
+				422628691B8EE66F00F5FB05 /* RoamCurrentProfile.m in Sources */,
+				423FB48F1B8D8667006A8AF7 /* RoamBindState.m in Sources */,
+				42520D441B954677008EE714 /* UserCenterViewController.m in Sources */,
+				4214F0AD1B96971300698F11 /* RegisterSuccessViewController.m in Sources */,
+				42274A261B942971001D4453 /* MainViewController.m in Sources */,
+				422628511B8EC9F300F5FB05 /* RoamImgInfo.m in Sources */,
+				425E659D1B95A753002736EA /* AboutMeViewController.m in Sources */,
+				422628601B8EE1D800F5FB05 /* RoamDeviceSlotMode.m in Sources */,
+				422628541B8ED04500F5FB05 /* RoamSimInfo.m in Sources */,
+				4226284E1B8EB90100F5FB05 /* RoamWanInfo.m in Sources */,
+				42567D2B1B8B07AC00163D07 /* Tool.m in Sources */,
+				42E29BF41B960A3C00A09B64 /* RegisterViewController.m in Sources */,
+				422628721B8F081B00F5FB05 /* RoamSMSStoreState.m in Sources */,
+				422628751B8F09B200F5FB05 /* RoamSMSPageInfo.m in Sources */,
+				42C5DA1C1B8C4703009F2DF9 /* DDString.m in Sources */,
+				42E29BF11B95F1DC00A09B64 /* WaitConnectViewController.m in Sources */,
+				425E659A1B95A2FA002736EA /* VersionInfoViewController.m in Sources */,
+				42E29BF71B96115200A09B64 /* DDRegex.m in Sources */,
+				42567D331B8B153000163D07 /* getgateway.c in Sources */,
+				422628571B8EDAED00F5FB05 /* RoamLoginState.m in Sources */,
+				4226287B1B8F0C9C00F5FB05 /* RoamSMS.m in Sources */,
+				425F0C0F1B92FF9300223411 /* DDBase64.m in Sources */,
+				42274A231B942955001D4453 /* InterfaceViewController.m in Sources */,
+				422628481B8EAD9C00F5FB05 /* RoamFlowReply.m in Sources */,
+				42567CF01B8AC7CE00163D07 /* main.m in Sources */,
+				4226285D1B8EDF9C00F5FB05 /* RoamLoginReply.m in Sources */,
+				420867601B9057CE002173C0 /* RoamErrorCode.m in Sources */,
+				42567D201B8AFF2A00163D07 /* RoamHttpBusi.m in Sources */,
+				4289A9791B96CDAD009823F3 /* MatchPhoneViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42567CFF1B8AC7CE00163D07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42567D0A1B8AC7CE00163D07 /* RoamingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42567D051B8AC7CE00163D07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42567CE91B8AC7CE00163D07 /* Roaming */;
+			targetProxy = 42567D041B8AC7CE00163D07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		42567CF71B8AC7CE00163D07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42567CF81B8AC7CE00163D07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		42567CFC1B8AC7CE00163D07 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42567CFD1B8AC7CE00163D07 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42567D0B1B8AC7CE00163D07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42567D0C1B8AC7CE00163D07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42567D0E1B8AC7CE00163D07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AC252E15A21288B69818C1B /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Roaming/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4f01ca08-8bc7-4a9f-afac-ecc919d3409f";
+			};
+			name = Debug;
+		};
+		42567D0F1B8AC7CE00163D07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7D068E21181E587DF4C9B01 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Roaming/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4f01ca08-8bc7-4a9f-afac-ecc919d3409f";
+			};
+			name = Release;
+		};
+		42567D111B8AC7CE00163D07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: China Financial Computerization Corporation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RoamingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4f01ca08-8bc7-4a9f-afac-ecc919d3409f";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roaming.app/Roaming";
+			};
+			name = Debug;
+		};
+		42567D121B8AC7CE00163D07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: China Financial Computerization Corporation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RoamingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4f01ca08-8bc7-4a9f-afac-ecc919d3409f";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roaming.app/Roaming";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42567CE51B8AC7CE00163D07 /* Build configuration list for PBXProject "Roaming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42567D0B1B8AC7CE00163D07 /* Debug */,
+				42567D0C1B8AC7CE00163D07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42567D0D1B8AC7CE00163D07 /* Build configuration list for PBXNativeTarget "Roaming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42567D0E1B8AC7CE00163D07 /* Debug */,
+				42567D0F1B8AC7CE00163D07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42567D101B8AC7CE00163D07 /* Build configuration list for PBXNativeTarget "RoamingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42567D111B8AC7CE00163D07 /* Debug */,
+				42567D121B8AC7CE00163D07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42567CE21B8AC7CE00163D07 /* Project object */;
+}
