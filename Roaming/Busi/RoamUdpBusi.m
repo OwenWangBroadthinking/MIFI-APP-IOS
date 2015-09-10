@@ -143,9 +143,13 @@
             RoamUdpPackage * recvUdpPackage=[RoamUdpPackage createPackageWithData:recvData];
             //校验是Mac回应
             if ([recvUdpPackage.commandID isEqualToString:UDP_GetMifiMacReply]) {
-                [RoamRAC sharedRoamRAC].MifiMac=recvUdpPackage.payLoad;
+                NSString * MifiMac=nil;
+                if (recvUdpPackage.payLoad.length>=24) {
+                    MifiMac=[DDString substr:recvUdpPackage.payLoad start:0 length:24];
+                }
+                [RoamRAC sharedRoamRAC].MifiMac=MifiMac;
                 if ([callbackTarget respondsToSelector:@selector(roamRAC:MifiMac:)]) {
-                    [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] MifiMac:recvUdpPackage.payLoad];
+                    [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] MifiMac:MifiMac];
                 }
             }
             

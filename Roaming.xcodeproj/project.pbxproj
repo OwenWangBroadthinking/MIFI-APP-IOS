@@ -60,6 +60,11 @@
 		425F0C121B93064400223411 /* DDOpenSSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 425F0C111B93064400223411 /* DDOpenSSL.m */; };
 		425F0C151B93072600223411 /* DDAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 425F0C141B93072600223411 /* DDAES.m */; };
 		4289A9791B96CDAD009823F3 /* MatchPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4289A9781B96CDAD009823F3 /* MatchPhoneViewController.m */; };
+		42ADFE1F1BA12A07004104D3 /* DDFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 42ADFE1E1BA12A07004104D3 /* DDFile.m */; };
+		42ADFE221BA12A7F004104D3 /* DDGzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 42ADFE211BA12A7F004104D3 /* DDGzip.m */; };
+		42ADFE251BA12B64004104D3 /* DDNetWorkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 42ADFE241BA12B64004104D3 /* DDNetWorkUtils.m */; };
+		42ADFE281BA12BF9004104D3 /* DDExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 42ADFE271BA12BF9004104D3 /* DDExecutor.m */; };
+		42ADFE2C1BA1374B004104D3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ADFE2B1BA1374B004104D3 /* CFNetwork.framework */; };
 		42C5DA191B8C3A63009F2DF9 /* RoamUdpPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C5DA181B8C3A63009F2DF9 /* RoamUdpPackage.m */; };
 		42C5DA1C1B8C4703009F2DF9 /* DDString.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C5DA1B1B8C4703009F2DF9 /* DDString.m */; };
 		42E29BF11B95F1DC00A09B64 /* WaitConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E29BF01B95F1DC00A09B64 /* WaitConnectViewController.m */; };
@@ -186,6 +191,16 @@
 		425F0C141B93072600223411 /* DDAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAES.m; sourceTree = "<group>"; };
 		4289A9771B96CDAD009823F3 /* MatchPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchPhoneViewController.h; sourceTree = "<group>"; };
 		4289A9781B96CDAD009823F3 /* MatchPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchPhoneViewController.m; sourceTree = "<group>"; };
+		42ADFE1D1BA12A07004104D3 /* DDFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFile.h; sourceTree = "<group>"; };
+		42ADFE1E1BA12A07004104D3 /* DDFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFile.m; sourceTree = "<group>"; };
+		42ADFE201BA12A7F004104D3 /* DDGzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGzip.h; sourceTree = "<group>"; };
+		42ADFE211BA12A7F004104D3 /* DDGzip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGzip.m; sourceTree = "<group>"; };
+		42ADFE231BA12B64004104D3 /* DDNetWorkUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDNetWorkUtils.h; sourceTree = "<group>"; };
+		42ADFE241BA12B64004104D3 /* DDNetWorkUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDNetWorkUtils.m; sourceTree = "<group>"; };
+		42ADFE261BA12BF9004104D3 /* DDExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDExecutor.h; sourceTree = "<group>"; };
+		42ADFE271BA12BF9004104D3 /* DDExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDExecutor.m; sourceTree = "<group>"; };
+		42ADFE291BA136D3004104D3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		42ADFE2B1BA1374B004104D3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		42C5DA171B8C3A63009F2DF9 /* RoamUdpPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoamUdpPackage.h; sourceTree = "<group>"; };
 		42C5DA181B8C3A63009F2DF9 /* RoamUdpPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoamUdpPackage.m; sourceTree = "<group>"; };
 		42C5DA1A1B8C4703009F2DF9 /* DDString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDString.h; sourceTree = "<group>"; };
@@ -205,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42ADFE2C1BA1374B004104D3 /* CFNetwork.framework in Frameworks */,
 				128400B0616BE4F8D75D9B2B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +238,8 @@
 		3B04E2DB880852A5A2F0C42E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42ADFE2B1BA1374B004104D3 /* CFNetwork.framework */,
+				42ADFE291BA136D3004104D3 /* libz.dylib */,
 				F52E8062FB95AFCB16DC4EEC /* libPods.a */,
 			);
 			name = Frameworks;
@@ -373,6 +391,14 @@
 		42567D281B8B079D00163D07 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				42ADFE261BA12BF9004104D3 /* DDExecutor.h */,
+				42ADFE271BA12BF9004104D3 /* DDExecutor.m */,
+				42ADFE231BA12B64004104D3 /* DDNetWorkUtils.h */,
+				42ADFE241BA12B64004104D3 /* DDNetWorkUtils.m */,
+				42ADFE201BA12A7F004104D3 /* DDGzip.h */,
+				42ADFE211BA12A7F004104D3 /* DDGzip.m */,
+				42ADFE1D1BA12A07004104D3 /* DDFile.h */,
+				42ADFE1E1BA12A07004104D3 /* DDFile.m */,
 				42E29BF51B96115200A09B64 /* DDRegex.h */,
 				42E29BF61B96115200A09B64 /* DDRegex.m */,
 				425F0C101B93064400223411 /* DDOpenSSL.h */,
@@ -612,8 +638,10 @@
 				421B75BF1B91AF390067CC8D /* RoamLoginParameter.m in Sources */,
 				422628661B8EE3F000F5FB05 /* RoamProfile.m in Sources */,
 				42567D191B8AE61200163D07 /* DDHttpClient.m in Sources */,
+				42ADFE1F1BA12A07004104D3 /* DDFile.m in Sources */,
 				42567D261B8AFFDE00163D07 /* RoamRAC.m in Sources */,
 				4226286C1B8EF78300F5FB05 /* RoamRouterInfo.m in Sources */,
+				42ADFE251BA12B64004104D3 /* DDNetWorkUtils.m in Sources */,
 				4226285A1B8EDDCC00F5FB05 /* RoamLocale.m in Sources */,
 				422628421B8EA47F00F5FB05 /* RoamBindReply.m in Sources */,
 				422628781B8F0B6600F5FB05 /* RoamSMSList.m in Sources */,
@@ -622,6 +650,7 @@
 				425F0C151B93072600223411 /* DDAES.m in Sources */,
 				4226284B1B8EB4BA00F5FB05 /* RoamWlanInfo.m in Sources */,
 				421B75C21B91D2E20067CC8D /* RoamWlanInfoParameter.m in Sources */,
+				42ADFE281BA12BF9004104D3 /* DDExecutor.m in Sources */,
 				422628451B8EAA3E00F5FB05 /* RoamActivateReply.m in Sources */,
 				421B75C51B91E6660067CC8D /* RoamRouterInfoParameter.m in Sources */,
 				42520D471B956CC7008EE714 /* SettingViewController.m in Sources */,
@@ -635,6 +664,7 @@
 				42567D231B8AFF5100163D07 /* RoamUdpBusi.m in Sources */,
 				422628691B8EE66F00F5FB05 /* RoamCurrentProfile.m in Sources */,
 				423FB48F1B8D8667006A8AF7 /* RoamBindState.m in Sources */,
+				42ADFE221BA12A7F004104D3 /* DDGzip.m in Sources */,
 				42520D441B954677008EE714 /* UserCenterViewController.m in Sources */,
 				4214F0AD1B96971300698F11 /* RegisterSuccessViewController.m in Sources */,
 				42274A261B942971001D4453 /* MainViewController.m in Sources */,

@@ -138,3 +138,15 @@
 #define COCOAPODS_VERSION_MINOR_Toast 4
 #define COCOAPODS_VERSION_PATCH_Toast 0
 
+// ZipArchive
+#define COCOAPODS_POD_AVAILABLE_ZipArchive
+#define COCOAPODS_VERSION_MAJOR_ZipArchive 1
+#define COCOAPODS_VERSION_MINOR_ZipArchive 4
+#define COCOAPODS_VERSION_PATCH_ZipArchive 0
+
+// skpsmtpmessage
+#define COCOAPODS_POD_AVAILABLE_skpsmtpmessage
+#define COCOAPODS_VERSION_MAJOR_skpsmtpmessage 0
+#define COCOAPODS_VERSION_MINOR_skpsmtpmessage 0
+#define COCOAPODS_VERSION_PATCH_skpsmtpmessage 1
+

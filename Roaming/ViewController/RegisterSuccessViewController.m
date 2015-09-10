@@ -37,7 +37,7 @@
         SHOWHUD(@"正在绑定");
         [RoamUdpBusi bind:self phonenumber:_registerPhone];
     }else{
-        [Tool showAlertWithMessage:@"Mifi物理地址未得到"];
+        [Tool showAlertWithMessage:[NSString stringWithFormat:@"Mifi物理地址长度错误，应为12位，实际得到%lu位",(unsigned long)_deviceno.text.length]];
     }
 }
 #pragma mark RoamRACDelegate

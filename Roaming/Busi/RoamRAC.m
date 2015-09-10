@@ -10,8 +10,12 @@
 #import <ReactiveCocoa.h>
 #import <AFNetworkReachabilityManager.h>
 #import "Tool.h"
+#import "AppDefines.h"
 #import <CocoaLumberjack.h>
 #import <DDLog.h>
+#import "DDFile.h"
+#import "DDNetWorkUtils.h"
+#import "DDString.h"
 @implementation RoamRAC
 +(instancetype)sharedRoamRAC{
     static RoamRAC * roamRAC=nil;
@@ -31,6 +35,8 @@
         [self startLogger];
         //监测网络连接
         [self startMoniNetwork];
+        //自动提交错误报告
+        [self startMoniException];
     }
     return self;
 }
@@ -66,6 +72,25 @@
     }];
 }
 
+-(void)startMoniException{
+    //添加异常捕获监听
+    NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
+    //在线程中使用发送异常文件
+//    [self performSelector:NSSelectorFromString(@"i") withObject:nil];
+}
+
+void UncaughtExceptionHandler(NSException *exception)
+{
+    
+    NSArray *arr = [exception callStackSymbols];
+    NSString *reason = [exception reason];
+    NSString *name = [exception name];
+    NSString *urlStr = [NSString stringWithFormat:@"错误详情:\n%@\n--------------------------\n%@\n---------------------\n%@",
+                        name,reason,[arr componentsJoinedByString:@"\n"]];
+    // NSString* s = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [DDFile WriteToDocumentPath:CORE_DMP_FILE content:[urlStr dataUsingEncoding:NSUTF8StringEncoding]];
+    
+}
 
 #pragma mark unused
 //监测异常情况

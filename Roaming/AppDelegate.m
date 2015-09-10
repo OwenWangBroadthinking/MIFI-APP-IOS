@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "RoamRAC.h"
+#import "DDFile.h"
+#import "DDNetWorkUtils.h"
+#import "AppDefines.h"
 @interface AppDelegate ()
 
 @end
@@ -18,7 +21,45 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [RoamRAC sharedRoamRAC];
+    [self checkExceptionFileAndSend];
     return YES;
+}
+
+-(void)checkExceptionFileAndSend{
+    NSString * version=[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    NSString * subject=[NSString stringWithFormat:@"iOS Exception [%@ %@]",[[NSUserDefaults standardUserDefaults] objectForKey:KEY_BINDPHONENUMBER],version];
+    NSString * zipFile=nil;
+    NSLog(@"日志目录：%@",kLogDirectory);
+    NSArray *files = [DDFile GetFileList:kLogDirectory];
+    if (files!=nil&&[files count]!=0) {
+        NSLog(@"日志文件总数:%lu",(unsigned long)[files count]);
+        NSLog(@"压缩目录：%@",kLogDirectory);
+        zipFile=[DDFile ArchiveToZip:kLogDirectory];
+    }
+    NSData * data=[DDFile ReadFromDocumentPath:CORE_DMP_FILE];
+    NSString * s=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    
+    if (s!=nil&&s.length>0) {
+        //添加发送错误日志邮件对象
+        if (zipFile==nil) {
+            [DDNetWorkUtils sendTsmMail:self successSEL:@selector(messageSent) failSEL:@selector(messageFailed) email_host:APP_EMAILUSER  subject:subject  message:s];
+        }else{
+            [DDNetWorkUtils sendTsmMail:self successSEL:@selector(messageSent) failSEL:@selector(messageFailed) email_host:APP_EMAILUSER  subject:subject  message:s attachfile:[[NSArray alloc]initWithObjects:zipFile, nil]];
+        }
+        
+    }
+}
+
+#pragma mark - SKPSMTPMessageDelegate
+- (void)messageSent
+{
+    NSLog(@"%@ 发送成功",CORE_DMP_FILE);
+    [DDFile RemoveFromDocumentPath:CORE_DMP_FILE];
+}
+
+- (void)messageFailed
+{
+    NSLog(@"%@ 发送失败",CORE_DMP_FILE);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

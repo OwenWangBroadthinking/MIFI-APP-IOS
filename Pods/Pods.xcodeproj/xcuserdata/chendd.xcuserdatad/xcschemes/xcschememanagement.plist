@@ -44,6 +44,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-ZipArchive.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-skpsmtpmessage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,47 +62,57 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>501DAD51D95A3DA90CF6BBAE</key>
+		<key>021D62889AD8899BD87701BD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>66769EA59671500C135C9148</key>
+		<key>1AD84613C070E4FBFEB97C40</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>94F102C3EF1A02C27A3AEAD3</key>
+		<key>2226883A1A7F53FA4C4AC542</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BB32710E4FC8A432E9631BAD</key>
+		<key>2AF6F568955D575AE92073E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C24346183EF51412C8481F4C</key>
+		<key>3AA1D42B84DFE4AC7C3ACF1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C856BD22787A46B02B9A08B1</key>
+		<key>3CF8AE57E2A1DFAC3C246709</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D4C4D4676046601A11E08108</key>
+		<key>510CC12F6E8F0968ADF6A367</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DBA99BCF7596B56B06790A63</key>
+		<key>8ABF0F2116CAE5B3845680F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FCBF0FEAF01604DA491908B8</key>
+		<key>B2DBB4F6A9D4BDF76B645DAC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B511EB07D8E87AE85D6FA6EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7808C4B00932F53051D6FCB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

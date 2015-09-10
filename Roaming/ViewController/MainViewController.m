@@ -75,6 +75,8 @@
         [self.animationImageView removeFromSuperview];
         if (!self.isConnectedMifi) {
             [self performSegueWithIdentifier:@"waitConnectSegue" sender:nil];
+            //启动后台提交错误报告任务
+            
         }
     }];
 }

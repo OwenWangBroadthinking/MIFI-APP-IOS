@@ -39,9 +39,9 @@
 //    //如果是50，则回复51
 //    if([sendPack.commandID isEqualToString:@"50"]){
 //        //未绑定
-////        recvData=[RoamUdpPackage createPackageWithPayLoad:@"00" andCommandID:@"51"].data;
+//        recvData=[RoamUdpPackage createPackageWithPayLoad:@"00" andCommandID:@"51"].data;
 //        //已绑定
-//        recvData=[RoamUdpPackage createPackageWithPayLoad:@"01000B3138323130303533303535" andCommandID:@"51"].data;
+////        recvData=[RoamUdpPackage createPackageWithPayLoad:@"01000B3138323130303533303535" andCommandID:@"51"].data;
 //        [self callBack:recvData];
 //        [self cleanUp];
 //        return;

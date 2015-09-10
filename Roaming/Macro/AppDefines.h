@@ -21,6 +21,8 @@ static const int ddLogLevel = DDLogLevelVerbose;// 定义日志级别
 #import <UIView+Toast.h>
 //UI
 #define ALERT_COMMON_TITLE @"温馨提示"
+#define APP_EMAILUSER @"bukatest"
+#define CORE_DMP_FILE @"core.dmp"
 #define MIFI_PORT 10593
 #define APP_BKCOLOR [UIColor colorWithRed:57/255.0f green:153/255.0 blue:153/255.0 alpha:1.0f]
 #define TBV_BKCOLOR [UIColor colorWithRed:244/255.0f green:244/255.0 blue:244/255.0 alpha:1.0f]
