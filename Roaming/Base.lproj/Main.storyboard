@@ -95,7 +95,6 @@
                                 </state>
                                 <connections>
                                     <action selector="activate:" destination="UaU-Tq-QSI" eventType="touchUpInside" id="kq8-n6-s9e"/>
-                                    <action selector="clickAiction:" destination="UaU-Tq-QSI" eventType="touchUpInside" id="7pP-IO-A5i"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjE-ku-MJ8">
@@ -147,7 +146,7 @@
                                     <constraint firstAttribute="height" constant="30" id="0el-ml-b7j"/>
                                     <constraint firstAttribute="width" constant="60" id="XtO-Ep-aOD"/>
                                 </constraints>
-                                <state key="normal" title="接口测试">
+                                <state key="normal" title="提交日志">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>

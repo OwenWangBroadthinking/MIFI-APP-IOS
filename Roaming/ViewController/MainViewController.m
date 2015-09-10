@@ -35,8 +35,8 @@
     [RoamRAC sharedRoamRAC].mainViewController=self;
     self.isConnectedMifi=NO;
     [self createAnimationImageView];
-    _flow.text=@"0MB";
-    _speed.text=@"0KB/S";
+    _flow.text=@"0.00MB";
+    _speed.text=@"0.00KB/S";
     _lastUsedFlow=0xffffffff;
 }
 - (void) createAnimationImageView {
@@ -103,10 +103,11 @@
 }
 - (IBAction)clickAiction:(id)sender {
     
-//    BKAlertView *view = [[BKAlertView alloc] init];
-//    [self.view addSubview: view];
-    
-    
+}
+
+-(void)startRunLoop{
+    //进入主页面后调用
+    [self startRunLoopReqSpeedAndPower];
 }
 - (IBAction)activate:(id)sender {
     SHOWHUD(@"请稍后");
@@ -123,8 +124,6 @@
         case 1:
             Toast(appD.window, @"激活成功");
             NSLog(@"激活日期时间[%@%@]",activateReply.activateDate,activateReply.activateTime);
-            //激活成功后可以上外网，此时实时显示速度，电量
-            [self startRunLoopReqSpeedAndPower];
             break;
         case 2:
             [Tool showAlertWithMessage:@"Mifi未绑定"];
@@ -145,21 +144,23 @@
     [usedflow_cr getBytes:&usedFlow length:sizeof(usedFlow)];
     
     float total_f=totalFlow/1024.00/1024.00;
-    NSString * total_text=nil;
-    if (total_f>1024.00) {
-        total_text=[NSString stringWithFormat:@"%.2fGB",total_f/1024.00];
+    float used_f=usedFlow/1024.00/1024.00;
+    float left_f=total_f-used_f;
+    NSString * left_text=nil;
+    if (left_f>1024.00) {
+        left_text=[NSString stringWithFormat:@"%.2fGB",left_f/1024.00];
     }else{
-        total_text=[NSString stringWithFormat:@"%.2fMB",total_f];
+        left_text=[NSString stringWithFormat:@"%.2fMB",left_f];
     }
-    _flow.text=total_text;
+    _flow.text=left_text;
     float speed_f=0;
     if (_lastUsedFlow!=0xffffffff) {
         speed_f= (usedFlow-_lastUsedFlow)/1024.00/10.00;
     }
     
     _lastUsedFlow=usedFlow;
-    _flow.text=[NSString stringWithFormat:@"%.2fKB/S",speed_f];
-    [self performSelector:@selector(getUsedFlow) withObject:nil afterDelay:5];
+    _speed.text=[NSString stringWithFormat:@"%.2fKB/S",speed_f];
+    [self performSelector:@selector(getUsedFlow) withObject:nil afterDelay:10];
 }
 -(void)roamRAC:(id)roamRAC imgInfo:(RoamImgInfo *)imgInfo{
     NSNumber * bat_level=imgInfo.bat_level;
@@ -170,7 +171,7 @@
     }else{
         _power.image=[UIImage imageNamed:@"battery_0"];
     }
-    [self performSelector:@selector(getImgInfo) withObject:nil afterDelay:5];
+    [self performSelector:@selector(getImgInfo) withObject:nil afterDelay:10];
 }
 -(void)roamRAC:(id)roamRAC wlanInfo:(RoamWlanInfo *)wlanInfo{
     NSNumber * wifi_state=wlanInfo.wifi_state;
@@ -181,16 +182,22 @@
     }else{
         _cellular.image=[UIImage imageNamed:@"cellular_0"];
     }
-    [self performSelector:@selector(getWlanInfo) withObject:nil afterDelay:5];
+    [self performSelector:@selector(getWlanInfo) withObject:nil afterDelay:10];
 }
 -(void)roamRAC:(id)roamRAC httpError:(NSString *)httpError{
     if ([httpError hasPrefix:@"getImgInfo"]) {//获取电量失败
         //将电量置为0电量
         _power.image=[UIImage imageNamed:@"battery_0"];
-        [self performSelector:@selector(getImgInfo) withObject:nil afterDelay:5];
+        [self performSelector:@selector(getImgInfo) withObject:nil afterDelay:10];
     }else if([httpError hasPrefix:@"getWlanInfo"]){//获取Wifi信号失败
         _cellular.image=[UIImage imageNamed:@"cellular_0"];
-        [self performSelector:@selector(getWlanInfo) withObject:nil afterDelay:5];
+        [self performSelector:@selector(getWlanInfo) withObject:nil afterDelay:10];
+    }
+}
+-(void)roamRAC:(id)roamRAC udpError:(NSString *)udpError{
+    if ([udpError hasPrefix:@"activate"]) {
+        HIDEHUD;
+        Toast(appD.window, @"激活超时");
     }
 }
 -(void)getUsedFlow{

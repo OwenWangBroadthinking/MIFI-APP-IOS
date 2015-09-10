@@ -40,7 +40,9 @@
         NSString * servBindPhone=[DDString stringFromHexString:bindState.bindData];
         if ([bindPhone isEqualToString:servBindPhone]) {
             NSLog(@"绑定手机号与本地保存一致");
-            [self dismissViewControllerAnimated:NO completion:nil];
+            [self dismissViewControllerAnimated:NO completion:^{
+                [[RoamRAC sharedRoamRAC].mainViewController startRunLoop];
+            }];
         }else{
             NSLog(@"绑定手机号与本地保存不一致，跳转到校验手机号页面");
             

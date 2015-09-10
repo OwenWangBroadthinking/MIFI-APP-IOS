@@ -10,6 +10,7 @@
 #import "Tool.h"
 #import "DDRegex.h"
 #import "AppDefines.h"
+#import "RoamRAC.h"
 @interface MatchPhoneViewController()
 @property (weak, nonatomic) IBOutlet UITextField *tf_phone;
 @property (weak, nonatomic) IBOutlet UILabel *refer1;
@@ -39,7 +40,9 @@
         _refer2.text=@"";
     }else{
         [[NSUserDefaults standardUserDefaults] setObject:_servBindPhone forKey:KEY_BINDPHONENUMBER];
-        [self dismissViewControllerAnimated:NO completion:nil];
+        [self dismissViewControllerAnimated:NO completion:^{
+            [[RoamRAC sharedRoamRAC].mainViewController startRunLoop];
+        }];
     }
 }
 -(void)bkView_click:(id)sender{

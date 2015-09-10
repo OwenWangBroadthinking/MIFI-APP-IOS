@@ -12,6 +12,9 @@
 #import "RoamUdpBusi.h"
 #import "DDString.h"
 #import <MBProgressHUD.h>
+#import "DDFile.h"
+#import "DDNetWorkUtils.h"
+
 @interface UserCenterViewController()<UITableViewDataSource,UITableViewDelegate,RoamRACDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *function;
 @property (nonatomic, strong) NSArray * functionArray;
@@ -23,8 +26,8 @@
 @implementation UserCenterViewController
 -(void)viewDidLoad{
     [super viewDidLoad];
-    _functionArray=[NSArray arrayWithObjects:@"设置",@"版本信息",@"关于我们",nil];
-    _imageArray=[NSArray arrayWithObjects:@"setting",@"version",@"about_me", nil];
+    _functionArray=[NSArray arrayWithObjects:@"设置",@"版本信息",@"关于我们",@"提交报告",nil];
+    _imageArray=[NSArray arrayWithObjects:@"setting",@"version",@"about_me",@"report", nil];
     _function.tableFooterView = [[UIView alloc] init];
     _function.separatorStyle=UITableViewCellSeparatorStyleNone;
     _username.text=[[NSUserDefaults standardUserDefaults] objectForKey:KEY_BINDPHONENUMBER];
@@ -87,10 +90,44 @@
         case 2://关于我们
             [self performSegueWithIdentifier:@"aboutMeSegue" sender:tableView];
             break;
+        case 3:
+            [self sendLogs];
+            break;
         default:
             break;
     }
 }
+-(void)sendLogs{
+    SHOWHUD(@"请稍后");
+    NSString * version=[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    NSString * subject=[NSString stringWithFormat:@"iOS Feedback [%@ %@]",[[NSUserDefaults standardUserDefaults] objectForKey:KEY_BINDPHONENUMBER],version];
+    NSString * zipFile=nil;
+    NSLog(@"日志目录：%@",kLogDirectory);
+    NSArray *files = [DDFile GetFileList:kLogDirectory];
+    if (files!=nil&&[files count]!=0) {
+        NSLog(@"日志文件总数:%lu",(unsigned long)[files count]);
+        NSLog(@"压缩目录：%@",kLogDirectory);
+        zipFile=[DDFile ArchiveToZip:kLogDirectory];
+    }
+    //添加发送错误日志邮件对象
+    if (zipFile==nil) {
+        [DDNetWorkUtils sendTsmMail:self successSEL:@selector(messageSent) failSEL:@selector(messageFailed) email_host:APP_EMAILUSER  subject:subject  message:@""];
+    }else{
+        [DDNetWorkUtils sendTsmMail:self successSEL:@selector(messageSent) failSEL:@selector(messageFailed) email_host:APP_EMAILUSER  subject:subject  message:@"" attachfile:[[NSArray alloc]initWithObjects:zipFile, nil]];
+    }
+}
+#pragma mark - SKPSMTPMessageDelegate
+- (void)messageSent
+{
+    NSLog(@"%@ 发送成功",CORE_DMP_FILE);
+    [DDFile RemoveFromDocumentPath:CORE_DMP_FILE];
+    HIDEHUD;
+}
 
+- (void)messageFailed
+{
+    NSLog(@"%@ 发送失败",CORE_DMP_FILE);
+    HIDEHUD;
+}
 
 @end

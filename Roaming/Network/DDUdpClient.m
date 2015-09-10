@@ -40,9 +40,9 @@
 //    //如果是50，则回复51
 //    if([sendPack.commandID isEqualToString:@"50"]){
 //        //未绑定
-//        recvData=[RoamUdpPackage createPackageWithPayLoad:@"00" andCommandID:@"51"].data;
+////        recvData=[RoamUdpPackage createPackageWithPayLoad:@"00" andCommandID:@"51"].data;
 //        //已绑定
-////        recvData=[RoamUdpPackage createPackageWithPayLoad:@"01000B3138323130303533303535" andCommandID:@"51"].data;
+//        recvData=[RoamUdpPackage createPackageWithPayLoad:@"01000B3138323130303533303535" andCommandID:@"51"].data;
 //        [self callBack:recvData];
 //        [self cleanUp];
 //        return;
@@ -68,6 +68,12 @@
 //    {
 //        recvData=[RoamUdpPackage createPackageWithPayLoad:@"0001313233343536373839313233" andCommandID:@"53"].data;//绑定成功
 ////        recvData=[RoamUdpPackage createPackageWithPayLoad:@"00" andCommandID:@"53"];//绑定失败
+//        [self callBack:recvData];
+//        [self cleanUp];
+//        return;
+//    }else if([sendPack.commandID isEqualToString:@"5C"]){
+//        recvData=[RoamUdpPackage createPackageWithPayLoad:@"00000000400000000000000040000000" andCommandID:@"5D"].data;//绑定成功
+//        //        recvData=[RoamUdpPackage createPackageWithPayLoad:@"00" andCommandID:@"53"];//绑定失败
 //        [self callBack:recvData];
 //        [self cleanUp];
 //        return;

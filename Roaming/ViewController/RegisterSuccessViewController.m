@@ -64,7 +64,9 @@
     if(bindReply.bindSuccess){
         Toast(appD.window, @"绑定成功");
         [[NSUserDefaults standardUserDefaults] setObject:_registerPhone forKey:KEY_BINDPHONENUMBER];
-        [self dismissViewControllerAnimated:NO completion:nil];
+        [self dismissViewControllerAnimated:NO completion:^{
+            [[RoamRAC sharedRoamRAC].mainViewController startRunLoop];
+        }];
         
     }else{
         [Tool showAlertWithMessage:@"绑定失败"];
