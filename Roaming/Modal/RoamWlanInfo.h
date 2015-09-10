@@ -10,7 +10,7 @@
 
 @interface RoamWlanInfo : NSObject
 +(instancetype)createWlanInfoWithDict:(NSDictionary*)dict;
-@property (nonatomic, copy) NSString * wifi_state;
+@property (nonatomic, copy) NSNumber * wifi_state;
 @property (nonatomic, copy) NSString * wlan_mode;
 @property (nonatomic, copy) NSString * wmode;
 @property (nonatomic, copy) NSString * wmode_5g;

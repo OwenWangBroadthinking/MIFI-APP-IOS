@@ -10,6 +10,7 @@
 #import "DDString.h"
 #import <AsyncUdpSocket.h>
 #import "RoamUdpPackage.h"
+#import "AppDefines.h"
 @interface DDUdpClient()
 @property (nonatomic, strong) AsyncUdpSocket * asyncUdpSocket;
 @property (nonatomic, copy) void (^m_recvDataCallBack) (NSData *);

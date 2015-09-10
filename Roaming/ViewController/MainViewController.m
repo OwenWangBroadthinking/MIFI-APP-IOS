@@ -162,20 +162,22 @@
     [self performSelector:@selector(getUsedFlow) withObject:nil afterDelay:5];
 }
 -(void)roamRAC:(id)roamRAC imgInfo:(RoamImgInfo *)imgInfo{
-    NSString * bat_level=imgInfo.bat_level;
+    NSNumber * bat_level=imgInfo.bat_level;
     NSString * level_container=@"01234";
-    if ([level_container containsString:bat_level]) {
-        _power.image=[UIImage imageNamed:[NSString stringWithFormat:@"battery_%@",bat_level]];
+    NSString * bat_level_s=[NSString stringWithFormat:@"%ld",bat_level.longValue];
+    if ([DDString containString:level_container sub:bat_level_s]) {
+        _power.image=[UIImage imageNamed:[NSString stringWithFormat:@"battery_%@",bat_level_s]];
     }else{
         _power.image=[UIImage imageNamed:@"battery_0"];
     }
     [self performSelector:@selector(getImgInfo) withObject:nil afterDelay:5];
 }
 -(void)roamRAC:(id)roamRAC wlanInfo:(RoamWlanInfo *)wlanInfo{
-    NSString * wlan_state=wlanInfo.wifi_state;
-    NSString * wlan_container=@"012345";
-    if ([wlan_container containsString:wlan_state]) {
-        _cellular.image=[UIImage imageNamed:[NSString stringWithFormat:@"cellular_%@",wlan_state]];
+    NSNumber * wifi_state=wlanInfo.wifi_state;
+    NSString * wifi_container=@"012345";
+    NSString * wifi_state_s=[NSString stringWithFormat:@"%ld",wifi_state.longValue];
+    if ([DDString containString:wifi_container sub:wifi_state_s ] ) {
+        _cellular.image=[UIImage imageNamed:[NSString stringWithFormat:@"cellular_%@",wifi_state_s]];
     }else{
         _cellular.image=[UIImage imageNamed:@"cellular_0"];
     }

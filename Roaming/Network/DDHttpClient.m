@@ -9,6 +9,7 @@
 #import "DDHttpClient.h"
 #import <AFNetworking.h>
 #import <AFURLRequestSerialization.h>
+#import "AppDefines.h"
 @implementation DDHttpClient
 +(instancetype)createHttpClient{
     DDHttpClient * httpClient=[[DDHttpClient alloc]init];

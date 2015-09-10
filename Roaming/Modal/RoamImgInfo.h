@@ -11,7 +11,7 @@
 @interface RoamImgInfo : NSObject
 +(instancetype)createImgInfoWithDict:(NSDictionary*)dict;
 @property (nonatomic, copy) NSString * chg_state;
-@property (nonatomic, copy) NSString * bat_level;
+@property (nonatomic, copy) NSNumber * bat_level;
 @property (nonatomic, copy) NSString * signal;
 @property (nonatomic, copy) NSString * sim_state;
 @property (nonatomic, copy) NSString * pin_state;
