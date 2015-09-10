@@ -100,7 +100,11 @@
 +(void)getWanInfo:(id)callbackTarget{
     [[DDHttpClient createHttpClient] getDataFromURL:HTTP_GetWanInfo parameters:nil dataCallBack:^(id data) {
         if (data==nil) {
-            [Tool showAlertWithMessage:@"读取Wan信息失败"];
+//            [Tool showAlertWithMessage:@"读取Wan信息失败"];
+            NSString * httpError=@"getWanInfo Http通讯异常";
+            if ([callbackTarget respondsToSelector:@selector(roamRAC:httpError:)]) {
+                [callbackTarget roamRAC:[RoamRAC sharedRoamRAC] httpError:httpError];
+            }
         }else{
             NSDictionary * dict=data;
             RoamWanInfo * wanInfo=[RoamWanInfo createWanInfoWithDict:dict];

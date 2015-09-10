@@ -19,6 +19,6 @@
 @property (nonatomic, copy) NSString * dur_time;
 @property (nonatomic, copy) NSString * download;
 @property (nonatomic, copy) NSString * upload;
-@property (nonatomic, copy) NSString * usage;
+@property (nonatomic, copy) NSNumber * usage;
 @property (nonatomic, copy) NSString * error;
 @end

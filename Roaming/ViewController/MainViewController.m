@@ -143,24 +143,27 @@
     NSData * usedflow_cr=[DDString reverse:usedflow_c];
     [usedflow_cr getBytes:&usedFlow length:sizeof(usedFlow)];
     
-    float total_f=totalFlow/1024.00/1024.00;
+//    float total_f=totalFlow/1024.00/1024.00;
     float used_f=usedFlow/1024.00/1024.00;
-    float left_f=total_f-used_f;
+    float left_f=used_f;
     NSString * left_text=nil;
-    if (left_f>1024.00) {
+    if (left_f>=1024.00) {
         left_text=[NSString stringWithFormat:@"%.2fGB",left_f/1024.00];
     }else{
         left_text=[NSString stringWithFormat:@"%.2fMB",left_f];
     }
     _flow.text=left_text;
+    [self performSelector:@selector(getUsedFlow) withObject:nil afterDelay:10];
+}
+-(void)roamRAC:(id)roamRAC wanInfo:(RoamWanInfo *)wanInfo{
+    unsigned long usedFlow= wanInfo.usage.longValue;
     float speed_f=0;
     if (_lastUsedFlow!=0xffffffff) {
         speed_f= (usedFlow-_lastUsedFlow)/1024.00/10.00;
     }
-    
     _lastUsedFlow=usedFlow;
     _speed.text=[NSString stringWithFormat:@"%.2fKB/S",speed_f];
-    [self performSelector:@selector(getUsedFlow) withObject:nil afterDelay:10];
+    [self performSelector:@selector(getWanInfo:) withObject:nil afterDelay:10];
 }
 -(void)roamRAC:(id)roamRAC imgInfo:(RoamImgInfo *)imgInfo{
     NSNumber * bat_level=imgInfo.bat_level;
@@ -192,6 +195,9 @@
     }else if([httpError hasPrefix:@"getWlanInfo"]){//获取Wifi信号失败
         _cellular.image=[UIImage imageNamed:@"cellular_0"];
         [self performSelector:@selector(getWlanInfo) withObject:nil afterDelay:10];
+    }else if([httpError hasPrefix:@"getWanInfo"]){
+        _speed.text=@"0.00KB/S";
+        [self performSelector:@selector(getWanInfo) withObject:nil afterDelay:10];
     }
 }
 -(void)roamRAC:(id)roamRAC udpError:(NSString *)udpError{
@@ -209,10 +215,14 @@
 -(void)getWlanInfo{
     [RoamHttpBusi getWlanInfo:self];
 }
+-(void)getWanInfo{
+    [RoamHttpBusi getWanInfo:self];
+}
 -(void)startRunLoopReqSpeedAndPower{
     [self getUsedFlow];
     [self getImgInfo];
     [self getWlanInfo];
+    [self getWanInfo];
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     UIViewController * send= segue.destinationViewController;
