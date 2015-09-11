@@ -163,7 +163,7 @@
     }
     _lastUsedFlow=usedFlow;
     _speed.text=[NSString stringWithFormat:@"%.2fKB/S",speed_f];
-    [self performSelector:@selector(getWanInfo:) withObject:nil afterDelay:10];
+    [self performSelector:@selector(getWanInfo) withObject:nil afterDelay:10];
 }
 -(void)roamRAC:(id)roamRAC imgInfo:(RoamImgInfo *)imgInfo{
     NSNumber * bat_level=imgInfo.bat_level;
